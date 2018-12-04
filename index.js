@@ -92,4 +92,4 @@ if(msg.content.startsWith("-ded")){
 }
 });
 
-bot.login(process.env.TOKEN)
+client.login(process.env.TOKEN)
