@@ -5,10 +5,10 @@ var mention = "126connectés"
 
 var fucked = false;
 
-bot.on('ready',() => {
+client.on('ready',() => {
     //invit link
-    bot.guilds.forEach(guild => {
-      var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
+    client.guilds.forEach(guild => {
+      var invite = client.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
       invite.createInvite().then(invite => console.log(`Connecté sur : ${guild.name} ${invite}`));
     })
 });
